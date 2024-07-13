@@ -8,6 +8,20 @@ html, body {
   font-family: Roboto;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+button {
+  width: 40vw;
+  height: 10vh;
+  color: rgb(75, 8, 130);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 1vh;
+  border: none;
+}
+
 @media screen and (min-width: 601px) {
   body {
     font-size: 2.5vw;
@@ -17,8 +31,17 @@ html, body {
     height: 500px;
   }
 
+  .canvas-container{
+    width: 500px;
+    height: 500px;
+  }
+
   .game-wrapper {
-    padding: 10vh 0;
+    padding: 5vh 0;
+  }
+
+  button {
+    font-size: 2.5vw;
   }
 }
 
@@ -32,15 +55,24 @@ html, body {
     height: 300px;
   }
 
+  .canvas-container{
+    width: 300px;
+    height: 300px;
+  }
   .game-wrapper {
     padding: 15vh 0;
+  }
+
+  button {
+    font-size: 5vw;
   }
 }
 
 .canvas-container {
-  border: 15px solid rgb(186, 102, 255);
+  border: 20px solid rgb(186, 102, 255);
   display: inline-block;
   box-shadow: 0 0 100px rgba(186, 102, 255, 0.603);
+  padding: 0;
 }
 
 .game-wrapper {
@@ -49,6 +81,35 @@ html, body {
   justify-content: center;
   align-items: center;
   gap: 5vh;
-
 }
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.547);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: rgb(75, 8, 130);
+  top: 20vh;
+  left: 20vw;
+  width: 60vw;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+  text-transform: uppercase;
+  border-radius: 1vh;
+}
+
+.hidden {
+  display: none;
+}
+
 

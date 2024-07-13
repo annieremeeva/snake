@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
       Змейка
     </title>
-    <link href="main.css" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="js-body">
     <div class="game-wrapper">
       <div class="score-box">
         <label>Счет:</label>
-        <label class="js-score">0</label>
+        <label class="js-score"></label>
       </div>
       <div class="canvas-container">
         <canvas id="board" class="game-board"></canvas>
       </div>
+      
     </div>
+    <div class="hidden js-modal-wrapper modal-wrapper">
+      <div class="hidden js-modal modal">
+        <label>Игра окончена!</label>
+        <button class="new-game-button js-new-game-button">
+          Новая игра
+        </button>
+      </div>
+    </div>
+    <script src="./snake.js"></script>
   </body>
 </html>
