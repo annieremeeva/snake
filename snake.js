@@ -118,6 +118,7 @@ function newGame() {
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
+/*
 // recognising swipes
 
 const body = document.querySelector('.js-body');
@@ -153,11 +154,12 @@ body.addEventListener('touchmove', (event) => {
       direction = 'down';
     }
   }
-  
+  changeDirection(direction);
   initialX = null;
   initialY = null;
 
 }, false);
+*/
 
 document.addEventListener('keydown', (event) => {
   if (event.code === 'ArrowLeft' || event.code === 'KeyA') direction = 'left';
@@ -187,3 +189,25 @@ function changeDirection(direction) {
     snake.dx = 0;
   }
 }
+
+document.querySelector('.js-up').addEventListener('click', () => {
+  direction = 'up';
+  changeDirection(direction);
+});
+
+document.querySelector('.js-down').addEventListener('click', () => {
+  direction = 'down';
+  changeDirection(direction);
+});
+
+document.querySelector('.js-left').addEventListener('click', () => {
+  direction = 'left';
+  changeDirection(direction);
+});
+
+document.querySelector('.js-right').addEventListener('click', () => {
+  direction = 'right';
+  changeDirection(direction);
+});
+
+
