@@ -124,12 +124,12 @@ const body = document.querySelector('.js-body');
 let initialX =  null;
 let initialY = null;
 
-document.addEventListener('touchstart', (event) => {
+body.addEventListener('touchstart', (event) => {
   initialX = event.touches[0].clientX;
   initialY = event.touches[0].clientY;
 }, false);
 
-document.addEventListener('touchmove', (event) => {
+body.addEventListener('touchmove', (event) => {
   if (initialX === null || initialY === null) return;
 
   const currentX = event.touches[0].clientX;
