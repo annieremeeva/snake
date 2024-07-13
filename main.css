@@ -22,6 +22,15 @@ button {
   border: none;
 }
 
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+.up-down-buttons {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 601px) {
   body {
     font-size: 2.5vw;
@@ -43,6 +52,9 @@ button {
   button {
     font-size: 2.5vw;
   }
+  .button-group {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -60,15 +72,23 @@ button {
     height: 300px;
   }
   .game-wrapper {
-    padding: 15vh 0;
+    padding-top: 15vh;
+    padding-bottom: 7vh;
   }
 
   button {
     font-size: 5vw;
   }
-
-  
 }
+
+.arrow-left, .arrow-right, 
+.arrow-down, .arrow-up {
+  width: 33vw;
+  border: 2px solid rgb(36, 1, 51);
+  background-color: rgb(225, 189, 255);
+}
+
+.arrow-left
 
 .canvas-container {
   border: 20px solid rgb(186, 102, 255);

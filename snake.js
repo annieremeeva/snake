@@ -157,7 +157,6 @@ body.addEventListener('touchmove', (event) => {
   initialX = null;
   initialY = null;
 
-  event.preventDefault();
 }, false);
 
 document.addEventListener('keydown', (event) => {
